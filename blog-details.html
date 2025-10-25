@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Details | E-Tiffin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .banner-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5" id="blogContent">
+    <!-- Blog details will appear here -->
+  </div>
+
+  <script>
+const blogs = [
+  {
+    title: "Healthy Eating Habits",
+    date: "2025-04-15",
+    image: "https://images.unsplash.com/photo-1603052871197-1cf0b237ab85",
+    content: "Eating healthy doesn't mean sacrificing taste. With the right balance of proteins, carbs, and veggies, you can enjoy flavorful meals every day. E-Tiffin brings you daily nutrition-packed meals to support your busy lifestyle and health goals."
+  },
+  {
+    title: "Why Home-Cooked Meals Matter",
+    date: "2025-04-10",
+    image: "https://images.unsplash.com/photo-1612201225811-ea47f09d0f28",
+    content: "Home-cooked meals provide a sense of comfort and security. They are usually more nutritious and less processed than takeout food. Plus, they connect us to culture and tradition and are often made with love and care."
+  },
+  {
+    title: "The E-Tiffin Story",
+    date: "2025-04-05",
+    image: "https://images.unsplash.com/photo-1603052871197-1cf0b237ab85",
+    content: "Started in a small kitchen, E-Tiffin has grown into a full-fledged delivery platform offering hygienic, affordable, and delicious tiffin services across the city. Our mission is to make quality home-style meals accessible to everyone."
+  },
+  {
+    title: "Boost Your Energy With the Right Food",
+    date: "2025-03-30",
+    image: "https://images.unsplash.com/photo-1603052871197-1cf0b237ab85",
+    content: "Feeling sluggish? The food you eat plays a big role in your energy levels. Swap processed snacks with fruits, nuts, and whole grains to keep your body energized and your mind sharp throughout the day."
+  },
+  {
+    title: "Meal Planning for a Busy Week",
+    date: "2025-03-25",
+    image: "https://images.unsplash.com/photo-1612201225811-ea47f09d0f28",
+    content: "Planning meals ahead can save you time, money, and stress. It ensures you're eating balanced meals and avoids the temptation of fast food. Learn how E-Tiffin simplifies this process for working professionals."
+  },
+  {
+    title: "Sustainability Through Tiffin Services",
+    date: "2025-03-20",
+    image: "https://images.unsplash.com/photo-1603052871197-1cf0b237ab85",
+    content: "E-Tiffin isn’t just about food — it’s about a greener planet. By using reusable containers and minimizing packaging waste, we're contributing to an eco-friendlier future. Join us in making conscious choices."
+  },
+  {
+    title: "Top 5 Vegetarian Protein Sources",
+    date: "2025-03-15",
+    image: "https://images.unsplash.com/photo-1612201225811-ea47f09d0f28",
+    content: "Getting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced."
+  },
+  {
+    title: "Lunchbox Love: Nostalgia & Nutrition",
+    date: "2025-03-10",
+    image: "https://images.unsplash.com/photo-1603052871197-1cf0b237ab85",
+    content: "Remember the joy of opening your lunchbox as a kid? We bring back those memories with healthy, nostalgic meals that blend taste and tradition. Relive the magic of simple, soulful food."
+  },
+  {
+    title: "How We Ensure Hygiene in Every Tiffin",
+    date: "2025-03-05",
+    image: "https://images.unsplash.com/photo-1603052871197-1cf0b237ab85",
+    content: "From kitchen sanitation to contactless delivery, our hygiene practices follow strict standards. Every tiffin is prepared in sanitized environments by trained chefs and carefully packed to maintain safety."
+  },
+  {
+    title: "Tiffin for Office Workers: Energy All Day",
+    date: "2025-02-28",
+    image: "https://images.unsplash.com/photo-1612201225811-ea47f09d0f28",
+    content: "Sitting all day at a desk can be draining — but the right meal boosts concentration and stamina. Our tiffins are curated to provide sustained energy so you can focus better without the afternoon crash."
+  },
+  {
+    title: "The Power of Indian Spices",
+    date: "2025-02-22",
+    image: "https://images.unsplash.com/photo-1612201225811-ea47f09d0f28",
+    content: "Spices like turmeric, cumin, and coriander don’t just add flavor — they offer health benefits too! Our meals use these ancient ingredients to help with digestion, immunity, and overall wellness."
+  },
+  {
+    title: "Behind the Scenes at E-Tiffin",
+    date: "2025-02-15",
+    image: "https://images.unsplash.com/photo-1603052871197-1cf0b237ab85",
+    content: "Meet the chefs and staff behind every meal. From sourcing fresh ingredients every morning to making deliveries on time, our team works passionately to make sure you receive a warm, delicious meal daily."
+  }
+];
+
+
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+    const blog = blogs[id];
+
+    if (blog) {
+      document.getElementById("blogContent").innerHTML = `
+        <img src="${blog.image}" class="banner-img mb-4" alt="Blog Image">
+        <h1>${blog.title}</h1>
+        <h6 class="text-muted mb-3">${blog.date}</h6>
+        <p>${blog.content}</p>
+      `;
+    } else {
+      document.getElementById("blogContent").innerHTML = `<div class="alert alert-danger">Blog not found.</div>`;
+    }
+  </script>
+</body>
+</html>

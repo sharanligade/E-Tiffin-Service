@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Login</title>
+  <!-- Bootstrap 3 CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+    .login-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-control {
+      border-radius: 5px;
+      box-shadow: none;
+    }
+    .btn-custom {
+      background-color: #28a745;
+      color: white;
+      border-radius: 5px;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+    }
+    .btn-custom:hover {
+      background-color: #218838;
+    }
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+    .forgot-password {
+      text-align: right;
+      font-size: 14px;
+      color: #28a745;
+    }
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .signup-link a {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body style="background-image:url(bg10.jpg); background-size: cover;">
+
+  <div class="login-container">
+    <h2 class="login-title"><b>Customer Login</b></h2>
+    <form action="a.html" method="post">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-custom">Login</button>
+      </div>
+    </form>
+    <div class="forgot-password">
+      <a href="#">Forgot your password?</a>
+    </div>
+    <div class="signup-link">
+      <p>Don't have an account? <a href="b.html">Sign Up</a></p>
+    </div>
+    <div class="footer-text">
+      <p>&copy; 2025 E-Tiffin Service Customer Login Portal. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap 3 JS, jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

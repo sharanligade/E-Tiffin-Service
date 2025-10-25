@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .login-logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .login-logo img {
+            width: 120px;
+        }
+        .form-control {
+            margin-bottom: 20px;
+        }
+        .btn-login {
+            width: 100%;
+            padding: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="background-image:url(bglogin1.jpg); background-size: cover; ">
+    <div class="container">
+        <div class="login-container">
+            <div class="login-logo">
+                <img src="logo1.png" alt="Admin Logo">
+                <h3>Admin Login</h3>
+            </div>
+
+            <!-- Login Form -->
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="email" class="form-control" id="username" name="Email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" onclick="togglePassword()"> Show Password
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-login">Login</button>
+            </form>
+
+            <div class="footer">
+                <p>&copy; E-Tiffin Service Admin Login Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        // Toggle password visibility
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var passwordType = passwordField.type === "password" ? "text" : "password";
+            passwordField.type = passwordType;
+        }
+    </script>
+</body>
+</html>

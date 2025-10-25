@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>E-Tiffin Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+    .container-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .image {
+      max-width: 50%;
+    }
+
+    .carousel-inner > .item > img {
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .feature-icon {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .jumbotron {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    blockquote {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-left: 5px solid orange;
+      min-height: 150px;
+    }
+
+    footer {
+      margin-top: 15px;
+      font-style: italic;
+    }
+    .hero {
+      background: url('tiffin5.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .section {
+      padding: 50px 20px;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .plans .panel {
+      transition: 0.3s;
+    }
+    .plans .panel:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    .testimonials blockquote {
+      font-size: 18px;
+      border-left: 5px solid #ffa500;
+      padding-left: 15px;
+    }
+    .footer {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .btn-orange {
+      background-color: orange;
+      color: white;
+      border: none;
+      
+    }
+    .footer-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-section .footer-desc {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-links a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #555;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: orange;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+  </style>
+</head>
+
+<body style="background-color:white; font-family: 'Times New Roman', Times, serif;">
+
+  <!-- Logo -->
+  
+
+  <!-- Heading -->
+  <div class="container">
+    <h1 align="center" style="color:black;">Welcome to our <strong><span style="color:orange;">E-Tiffin Service</span></strong></h1>
+  </div>
+
+  <!-- Carousel -->
+  <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="s5.jpg" alt="Slide 1" style="width:100%;">
+        </div>
+        <div class="item">
+          <img src="ss1.jpg" alt="Slide 2" style="width:100%;">
+        </div>
+        <div class="item">
+          <img src="s5.jpg" alt="Slide 3" style="width:100%;">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+  </div><br>
+
+  <!-- Info Section -->
+  <div class="container">
+    <h1 align="center" style="color:black;"><strong>Pocket-Friendly and Savory Tiffin Service in India</strong></h1>
+    
+  </div>
+
+  <!-- Features Section -->
+  <div class="container text-center" style="margin-top: 50px;">
+    <h2 style="color: orange;"><strong>Why Choose Us?</strong></h2>
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-sm-4">
+        
+        <h4>Healthy & Hygienic</h4>
+        <p>We deliver fresh, nutritious, and hygienic meals daily.</p>
+      </div>
+      <div class="col-sm-4">
+      
+        <h4>Timely Delivery</h4>
+        <p>Get your meals hot and on time, every time.</p>
+      </div>
+      <div class="col-sm-4">
+        
+        <h4>Affordable Plans</h4>
+        <p>Pocket-friendly tiffin options to fit every budget.</p>
+      </div>
+    </div>
+  </div><br>
+  
+
+  <!-- Testimonials Section -->
+  <div class="container" style="margin-top: 60px;">
+    <h2 class="text-center" style="color: orange;">What Our Customers Say</h2>
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-md-4">
+        <blockquote>
+          <p>"Tasty, healthy, and always on time. I love E Tiffin service!"</p>
+          <footer>Rohit Sharma, Student</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote>
+          <p>"Great value for money. Perfect for working professionals."</p>
+          <footer>Anjali Mehta, Software Engineer</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote>
+          <p>"I feel like I'm eating homemade food again. Highly recommend!"</p>
+          <footer>Sunil Verma, Banker</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div><br>
+
+  <!-- CTA Banner -->
+ 
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p class="text-center"><b>Have questions? Reach out to us!</b></p>
+    <p class="text-center"><b>📞 +91-8208794512 | ✉️ sharanr789@gmai.com </b></p>
+    <p class="text-center">
+      <a href="https://www.instagram.com/sharan_ligade/" class="btn btn-orange"><b>Follow Us on Instagram</b></a>
+    </p>
+  </div>
+ <div class="jumbotron text-center" style="background-color: orange; color: white; margin-top: 50px;">
+    <h2>Ready to Order?</h2>
+    <p>Choose your plan and enjoy fresh, homemade food every day!</p>
+    <a href="trial1.html" class="btn btn-primary btn-lg">SIGN UP NOW</a>
+  </div>
+ <footer class="footer-section">
+  <div class="container">
+    <div class="row">
+
+      <!-- About -->
+  <div class="col-md-3">
+       <img src="logo1.png" alt="E-Tiffin Logo" width="160">
+         
+        <div class="social-icons">
+          
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="col-md-3">
+        <h4>Company</h4>
+        <ul class="footer-links"><b>
+            <li><a href="a.html">About Us</a></li>
+            <li><a href="blogs.jsp">Blogs</a></li>
+          <li><a href="d.html">How It's Works</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+       </b> </ul>
+      </div>
+
+      <!-- Information -->
+      <div class="col-md-3">
+        <h4>Registration or Login</h4>
+        <ul class="footer-links"><b>
+           <li><a href="agent.html">Agent Registration</a></li>
+          <li><a href="trial1.html">Customer Registration</a></li>
+        
+         
+        </b></ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3"><b>
+        <h4>Contact Us</h4>
+        <p><span class="glyphicon glyphicon-earphone"></span> +91-8208794512</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> sharanr789@gmail.com</p>
+          </b> </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

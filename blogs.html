@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Blogs | E-Tiffin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card-text {
+      max-height: 120px;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.3s ease;
+    }
+    .card-text.expanded {
+      max-height: 1000px;
+    }
+    .read-more {
+      cursor: pointer;
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <h1 class="text-center mb-5">Our Latest Blogs</h1>
+  <div class="row g-4" id="blogContainer">
+    <!-- Blog cards will be inserted here -->
+  </div>
+</div>
+
+<script>
+  const blogs = [
+  {
+    title: "Healthy Eating Habits",
+    date: "2025-04-15",
+    image: "healthy1.jpg",
+    content: "Eating healthy doesn't mean sacrificing taste. With the right balance of proteins, carbs, and veggies, you can enjoy flavorful meals every day. E-Tiffin brings you daily nutrition-packed meals to support your busy lifestyle and health goalsGetting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced."
+  },
+  {
+    title: "Why Home-Cooked Meals Matter",
+    date: "2025-04-10",
+    image: "zz1.jpg",
+    content: "Home-cooked meals provide a sense of comfort and security. They are usually more nutritious and less processed than takeout food. Plus, they connect us to culture and tradition and are often made with love and care.Getting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced"
+  },
+  {
+    title: "The E-Tiffin Story",
+    date: "2025-04-05",
+    image: "zz2.jpg",
+    content: "Started in a small kitchen, E-Tiffin has grown into a full-fledged delivery platform offering hygienic, affordable, and delicious tiffin services across the city. Our mission is to make quality home-style meals accessible to everyone.Getting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced"
+  },
+  {
+    title: "Boost Your Energy With the Right Food",
+    date: "2025-03-30",
+    image: "zz3.jpg",
+    content: "Feeling sluggish? The food you eat plays a big role in your energy levels. Swap processed snacks with fruits, nuts, and whole grains to keep your body energized and your mind sharp throughout the day.Getting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced"
+  },
+  {
+    title: "Meal Planning for a Busy Week",
+    date: "2025-03-25",
+    image: "zz4.jpg",
+    content: "Planning meals ahead can save you time, money, and stress. It ensures you're eating balanced meals and avoids the temptation of fast food. Learn how E-Tiffin simplifies this process for working professionals.Getting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced"
+  },
+  {
+    title: "Sustainability Through Tiffin Services",
+    date: "2025-03-20",
+    image: "zz5.jpg",
+    content: "E-Tiffin isn’t just about food — it’s about a greener planet. By using reusable containers and minimizing packaging waste, we're contributing to an eco-friendlier future. Join us in making conscious choices.Getting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced"
+  },
+  {
+    title: "Top 5 Vegetarian Protein Sources",
+    date: "2025-03-15",
+    image: "zz6.jpg",
+    content: "Getting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balancedGetting enough protein from vegetarian sources is easy! Lentils, chickpeas, tofu, paneer, and quinoa are packed with protein and are staples in many of our daily tiffins. See how we use them to keep your meals balanced."
+  }
+
+ 
+];
+
+  const container = document.getElementById("blogContainer");
+
+  blogs.forEach(blog => {
+    const card = document.createElement("div");
+    card.className = "col-md-4";
+
+    card.innerHTML = `
+      <div class="card h-100 shadow-sm">
+        <img src="${blog.image}" class="card-img-top" alt="Blog Image">
+        <div class="card-body">
+         <h5 class="card-title">
+  <a href="blog-details.html?id=${blogs.indexOf(blog)}" class="text-decoration-none text-dark">${blog.title}</a>
+</h5>
+
+          <h6 class="card-subtitle mb-2 text-muted">${blog.date}</h6>
+          <p class="card-text blog-snippet">${blog.content}</p>
+          <span class="read-more">Read more</span>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  // Read More toggle
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("read-more")) {
+      const text = e.target.previousElementSibling;
+      text.classList.toggle("expanded");
+      e.target.textContent = text.classList.contains("expanded") ? "Read less" : "Read more";
+    }
+  });
+</script>
+
+</body>
+</html>
